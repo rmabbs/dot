@@ -7,6 +7,23 @@ gaps outer 5
 font pango:mono 9
 set $mod Mod4
 set $term --no-startup-id urxvt
+#Colours
+set $base00 #282936
+set $base01 #3a3c4e
+set $base02 #4d4f68
+set $base03 #626483
+set $base04 #62d6e8
+set $base05 #e9e9f4
+set $base06 #f1f2f8
+set $base07 #f7f7fb
+set $base08 #ea51b2
+set $base09 #b45bcf
+set $base0A #00f769
+set $base0B #ebff87
+set $base0C #a1efe4
+set $base0D #62d6e8
+set $base0E #b45bcf
+set $base0F #00f769
 
 # #---Starting External Scripts---# #
 #Composite manager:
@@ -20,6 +37,18 @@ exec --no-startup-id ~/.scripts/remaps
 bar {
 	position top
         status_command i3status
+ colors {
+          background $base00
+          separator  $base01
+          statusline $base04
+
+    # State             Border  BG      Text
+    focused_workspace   $base05 $base0D $base00
+    active_workspace    $base05 $base03 $base00
+    inactive_workspace  $base03 $base01 $base05
+    urgent_workspace    $base08 $base08 $base00
+    binding_mode        $base00 $base0A $base00
+ }
 }
 
 # #---Function Buttons---# #
