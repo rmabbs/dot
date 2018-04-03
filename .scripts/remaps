@@ -1,0 +1,7 @@
+#!/bin/bash
+
+# This script is called by i3 on startup.
+
+# Map the caps lock key to super...
+setxkbmap -layout gb -option caps:escape
+
